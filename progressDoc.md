@@ -34,6 +34,8 @@ Center for Instructional Design and Innovation - Utah State University
 * Reformatted data
 * Threw out quiz times that were longer than 4 hours (14400 seconds)
 * Updated documentation
+* Began running on Jackson's courses
+* Moved to public repository
 
 ### TODO
 * Check on number of students
