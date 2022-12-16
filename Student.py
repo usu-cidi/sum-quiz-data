@@ -58,8 +58,11 @@ class Student:
 
     def getFinalScorePerc(self):
         if (self.attempts[self.getNumAttempts() - 1]["kept_score"]) != None and (self.attempts[self.getNumAttempts() - 1]["quiz_points_possible"]) != None:
-            ratio = (self.attempts[self.getNumAttempts() - 1]["kept_score"]) / (self.attempts[self.getNumAttempts() - 1]["quiz_points_possible"])
-            return ratio * 100
+            if (self.attempts[self.getNumAttempts() - 1]["quiz_points_possible"] != 0):
+                ratio = (self.attempts[self.getNumAttempts() - 1]["kept_score"]) / (self.attempts[self.getNumAttempts() - 1]["quiz_points_possible"])
+                return ratio * 100
+            else:
+                self.writeToReport("", "Quiz worth 0 points, percentage of 0 given")
         return 0
 
     def checkTimeThrownOut(self):

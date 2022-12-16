@@ -25,17 +25,23 @@ Center for Instructional Design and Innovation - Utah State University
 
 ## Progress Report
 
-### 12.13.2022
+### 12.13.22
 * Copied over from Individual Quiz Data project
 * Began making relevant changes
 
-### 12.15.2022
+### 12.15.22
 * Took out student info api call
 * Reformatted data
 * Threw out quiz times that were longer than 4 hours (14400 seconds)
 * Updated documentation
 * Began running on Jackson's courses
 * Moved to public repository
+
+### 12.16.22
+* Fixed a divide by zero error that occurs when a quiz is worth 0 points
+* Fixed a bug with throwing out data that has timed out
+* Ran on Jackson's courses, got the data, I'll combine them tomorrow
+
 
 ### TODO
 * Check on number of students

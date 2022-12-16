@@ -44,13 +44,14 @@ rows = []
 
 allTheStudents = {}
 
-timesThrownOut = 0
+totalTimesThownOut = 0
 
 for quiz in quizIDs:
     numStudentsTook = 0
     totalTimeTaken = 0
     totalAttemptsMade = 0
     totalScorePer = 0
+    thisQuizTimesThrownOut = 0
 
     writeToReport(quiz, "On quiz")
     callResult = getStudents(str(quiz))
@@ -64,9 +65,10 @@ for quiz in quizIDs:
             totalAttemptsMade += students[student].getNumAttempts()
             totalScorePer += students[student].getFinalScorePerc()
             if students[student].timeThrownOut:
-                timesThrownOut += 1
+                totalTimesThownOut += 1
+                thisQuizTimesThrownOut += 1
 
-        rowToAdd = [quizIDs[quiz], quiz, round(getAvg(totalTimeTaken, numStudentsTook - timesThrownOut) / 60, 2), getAvg(totalAttemptsMade, numStudentsTook),
+        rowToAdd = [quizIDs[quiz], quiz, round(getAvg(totalTimeTaken, numStudentsTook - thisQuizTimesThrownOut) / 60, 2), getAvg(totalAttemptsMade, numStudentsTook),
                     getAvg(totalScorePer, numStudentsTook), numStudentsTook]
         rows.append(rowToAdd)
         writeToReport(rowToAdd, "Row added")
@@ -81,8 +83,8 @@ with open(outFile, "w") as csvfile:
 print(f"\nDone in {time() - beginTime:.3f} seconds!")
 writeToReport("", f"Done in {time() - beginTime:.3f} seconds!")
 
-if timesThrownOut != 0:
-    print(f"Note: {timesThrownOut} piece(s) of time spent data were thrown out since they were over the limit of 4 hours.")
+if totalTimesThownOut != 0:
+    print(f"Note: {totalTimesThownOut} piece(s) of time spent data were thrown out since they were over the limit of 4 hours.")
 
 os.remove("canvasData4737187.txt")
 #os.remove("contextReport8747525.txt")
