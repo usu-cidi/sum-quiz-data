@@ -1,5 +1,5 @@
 # Summarized Quiz Data Project
-### cidi-individual-quiz-data
+### cidi-sum-quiz-data
 Center for Instructional Design and Innovation - Utah State University
 
 * Created by Emma Lynn (a02391851@usu.edu)
