@@ -2,13 +2,11 @@
 ### cidi-sum-quiz-data
 Center for Instructional Design and Innovation - Utah State University
 
-* Created by Emma Lynn (a02391851@usu.edu)
+* Created by Emma Lynn (e.lynn@usu.edu)
 * Supervised by Neal Legler, CIDI Director (neal.legler@usu.edu)
 * On request from Jackson Graham, Mechanical and Aerospace Engineering Dept.
 
 This repository contains the code necessary to generate a report showing an overall summary of student data from Canvas quiz attempts.
-
-_Note: This program has only been tested on Macs up to this point. If you want to use this on another OS, you are welcome to try it and if there are issues please follow the Bug Report instructions at the bottom of this page to indicate your interest in better support for other Operating Systems._
 
 ## Start here!
 In these instructions, I will walk you through the entire process of running this program to generate your course data.
@@ -128,14 +126,14 @@ git pull origin main
 ```
 The project should update with any changes and bug fixes.
 
-_If you are having issues with cloning the project, feel free to go back and try downloading the zip as is instructed in the original instructions. You can also email me (a02391851@usu.edu) and I can help you set everything up if you would prefer._
+_If you are having issues with cloning the project, feel free to go back and try downloading the zip as is instructed in the original instructions. You can also email me (e.lynn@usu.edu) and I can help you set everything up if you would prefer._
 
 You can now return to the original instructions. Begin at the section on setting up your environment.
 
 ## Bug Reports
 If something behaves unexpectedly, or you run into a problem with the program, please let me know.
 
-Send bug reports to a02391851@usu.edu with the subject line "Bug Report - Individual Quiz Data".
+Send bug reports to e.lynn@usu.edu with the subject line "Bug Report - Individual Quiz Data".
 
 Please include:
 * What you expected to happen
